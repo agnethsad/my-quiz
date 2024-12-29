@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interaktív Kérdések</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    .question {
+      display: none;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:focus {
+      outline: none;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Interaktív Kérdések</h1>
+
+  <div class="question" id="question-A">
+    <p>A: Mi Nagy Sándor makedón király angol neve?</p>
+    <button onclick="nextQuestion('A')">Tovább</button>
+  </div>
+  <div class="question" id="question-B">
+    <p>B: Melyik az a dal, melyet az általános iskola 8. osztályosok a tanév végén szoktak közösen énekelni?</p>
+    <button onclick="nextQuestion('B')">Tovább</button>
+  </div>
+  <div class="question" id="question-C">
+    <p>C: 2022-es Qatari világbajnokságon az F-csoportban melyik válogatott végzett az utolsó helyen?</p>
+    <button onclick="nextQuestion('C')">Tovább</button>
+  </div>
+  <div class="question" id="question-D">
+    <p>D: Ki tartja a magyar férfi labdarugó válogatott pályára lépési rekordját?</p>
+    <button onclick="nextQuestion('D')">Tovább</button>
+  </div>
+  <div class="question" id="question-E">
+    <p>E: Melyik az a Nyugat-Dunántúli, megyei jogú város, ahol az első magyar honalapító királyt, királlyá koronázták?</p>
+    <button onclick="nextQuestion('E')">Tovább</button>
+  </div>
+  <div class="question" id="question-F">
+    <p>F: 2026-os évtől ki lesz a Redbull Racing motorbeszállítója?</p>
+    <button onclick="nextQuestion('F')">Tovább</button>
+  </div>
+  <div class="question" id="question-G">
+    <p>G: Melyik játékos rekordját döntötte meg Lionel Messi a 91 gólós szezonjával?</p>
+    <button onclick="nextQuestion('G')">Tovább</button>
+  </div>
+  <div class="question" id="question-H">
+    <p>H: Melyik filmszereplőről szól a következő mondat: „The boy who lived, come to die”</p>
+    <button onclick="nextQuestion('H')">Tovább</button>
+  </div>
+  <div class="question" id="question-I">
+    <p>I: Melyik az a futballista, amely karrierje során játszott az Inter Milanban és az AC Milanban is?</p>
+    <button onclick="nextQuestion('I')">Tovább</button>
+  </div>
+  <div class="question" id="question-J">
+    <p>J: Melyik ország zászlajának pontos leírása a következő: vörös napkorong fehér alapon.</p>
+    <button onclick="nextQuestion('J')">Tovább</button>
+  </div>
+  <div class="question" id="question-K">
+    <p>K: „Egykor zölden rejtőzőm, nap érlel feketére, törnek, őrölnek és forró víz ébreszt életre. Keserű vagyok mégis sokak szívének kedves.” Mi vagyok?</p>
+    <button onclick="nextQuestion('K')">Tovább</button>
+  </div>
+  <div class="question" id="question-L">
+    <p>L: Melyik országgal ellen aratott fölényes győzelmet San Marino válogatottja?</p>
+    <button onclick="nextQuestion('L')">Tovább</button>
+  </div>
+  <div class="question" id="question-M">
+    <p>M: Ki volt az a fasizmus eszméjét valló olasz politikai vezető, aki 1922 és 1943 között Olaszország miniszterelnökeként irányította az országot, és aki szoros szövetséget kötött Hitler Németországával a második világháború alatt?</p>
+    <button onclick="nextQuestion('M')">Tovább</button>
+  </div>
+  <div class="question" id="question-N">
+    <p>N: Melyik ételt kell tudnia szaggatnia a hagyományos asszonyjelölteknek? (A sör is legyen behűtve)</p>
+    <button onclick="nextQuestion('N')">Tovább</button>
+  </div>
+  <div class="question" id="question-O">
+    <p>O: Folytasd a következőt! : „Törtet törttel úgy …….., hogy a reciprokkal szorzunk”</p>
+    <button onclick="nextQuestion('O')">Tovább</button>
+  </div>
+  <div class="question" id="question-P">
+    <p>P: „Erdő mélyén, ahol a fák között árnyékok nyúlnak, fehér és fekete foltok tűnnek elő. Bár nem egy tigris mégis rejtőzködik, az állatvilág titokzatos lakója, de nem könnyű találkozni vele”</p>
+    <button onclick="nextQuestion('P')">Tovább</button>
+  </div>
+  <div class="question" id="question-Q">
+    <p>Q: Melyik futballista az, aki elhíresült a külsővel szerzett góljairól?</p>
+    <button onclick="nextQuestion('Q')">Tovább</button>
+  </div>
+  <div class="question" id="question-R">
+    <p>R: Melyik várós területén fekszik a világ legkisebb országa?</p>
+    <button onclick="nextQuestion('R')">Tovább</button>
+  </div>
+  <div class="question" id="question-S">
+    <p>S: Melyik magyar várost nevezik a hűség városának?</p>
+    <button onclick="nextQuestion('S')">Tovább</button>
+  </div>
+  <div class="question" id="question-T">
+    <p>T: Melyik híres ókori görög hadászati átverés volt az, amelyet a görögök alkalmaztak a ×××× háború végén, és amelynek lényege, hogy egy óriási, üres fa szoborba rejtett katonák segítségével sikerült bejutniuk a látszólag legyőzhetetlen városba, így biztosítva a végső győzelmet?</p>
+    <button onclick="nextQuestion('T')">Tovább</button>
+  </div>
+  <div class="question" id="question-U">
+    <p>U: „A társadalmi fejlődés objektív törvényszerűségeitől elvonatkoztatott és az adott körülmények között meg nem valósítható, hibátlannak, eszményinek elképzelt társadalmi, állami, politikai rendszer, illetve olyan képzeletbeli hely, ahol ezt megvalósíthatónak ábrázolják” Mi ez?</p>
+    <button onclick="nextQuestion('U')">Tovább</button>
+  </div>
+  <div class="question" id="question-V">
+    <p>V: Mi a VSC rövidítése?</p>
+    <button onclick="nextQuestion('V')">Tovább</button>
+  </div>
+  <div class="question" id="question-W">
+    <p>W: Ki az, aki kémia tanárból drogbáróvá válik, és megteremti a világ legnagyobb drogbirodalmát?</p>
+    <button onclick="nextQuestion('W')">Tovább</button>
+  </div>
+  <div class="question" id="question-X">
+    <p>X: Milyen módon lehet elérni a hatékonyság növelését a digitális üzleti rendszerek körében?</p>
+    <button onclick="nextQuestion('X')">Tovább</button>
+  </div>
+  <div class="question" id="question-Y">
+    <p>Y: Mi a fiatal generációk szerint az ideális életmódja?</p>
+    <button onclick="nextQuestion('Y')">Tovább</button>
+  </div>
+  <div class="question" id="question-Z">
+    <p>Z: Melyik nyelvet tanulják leginkább az egyetemisták a legjobban iskolai szinten?</p>
+    <button onclick="nextQuestion('Z')">Tovább</button>
+  </div>
+
+  <script>
+    let currentQuestion = 'A';  // Start with question A
+
+    function nextQuestion(questionId) {
+      document.getElementById('question-' + questionId).style.display = 'none';
+      let next = String.fromCharCode(questionId.charCodeAt(0) + 1);  // Get the next question
+      if (next <= 'Z') {
+        document.getElementById('question-' + next).style.display = 'block';
+      }
+    }
+
+    // Show the first question when the page loads
+    document.getElementById('question-' + currentQuestion).style.display = 'block';
+  </script>
+</body>
+</html>
